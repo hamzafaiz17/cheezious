@@ -1,4 +1,3 @@
-import alignR from "@/public/images/align.svg";
 import MainLogo from "@/public/images/mainLogo.webp";
 import Searchico from "@/public/images/searchicon.svg";
 import markicon from "@/public/images/mark.svg";
@@ -10,7 +9,7 @@ export default function HeaderS() {
       <div className="row d-flex">
         <div className="col-md-2  d-flex align-items-center">
           <button
-            class="border-0 bg-transparent"
+            className="border-0 bg-transparent"
             type="button"
             data-bs-toggle="offcanvas"
             data-bs-target="#offcanvasScrolling"
