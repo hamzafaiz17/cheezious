@@ -2,30 +2,41 @@ import MainLogo from "@/public/images/mainLogo.webp";
 import Searchico from "@/public/images/searchicon.svg";
 import markicon from "@/public/images/mark.svg";
 import { ShoppingCart, User2, AlignRight } from "lucide-react";
+import Link from "next/link";
 import OffcanvasManu from "./offcanvasmenu";
 export default function HeaderS() {
   return (
     <>
       <div className="row d-flex">
-        <div className="col-md-2  d-flex align-items-center">
-          <button
-            className="border-0 bg-transparent"
-            type="button"
-            data-bs-toggle="offcanvas"
-            data-bs-target="#offcanvasScrolling"
-            aria-controls="offcanvasScrolling"
-          >
-            <AlignRight size={35} stroke={"#f15b25"} className="me-2" />
-          </button>
-          <OffcanvasManu />
-          <a
-            href="/"
-            className="d-flex align-items-center text-white text-decoration-none"
-          >
-            <img src={MainLogo.src} width={"150px"} />
-          </a>
+        <div className="col-md-2 p-0 d-flex align-items-center justify-content-between">
+          <div className="d-flex align-items-center ">
+            <button
+              className="border-0 bg-transparent"
+              type="button"
+              data-bs-toggle="offcanvas"
+              data-bs-target="#offcanvasScrolling"
+              aria-controls="offcanvasScrolling"
+            >
+              <AlignRight size={35} stroke={"#f15b25"} className="me-2" />
+            </button>
+            <OffcanvasManu />
+            <Link
+              href="/"
+              className="d-flex align-items-center text-white text-decoration-none"
+            >
+              <img src={MainLogo.src} width={"150px"} />
+            </Link>
+          </div>
+          <div className="text-end mobile-icons g-2" bis_skin_checked="1">
+            <button type="button" className="border-0 bg-transparent me-3">
+              <ShoppingCart />
+            </button>
+            <button type="button" className="border-0 bg-transparent">
+              <User2 />
+            </button>
+          </div>
         </div>
-        <div className="col-md-6 align-items-center d-flex ">
+        <div className="col-md-6 align-items-center d-md-flex searchbar-header">
           <form className="colorinput w-100 p-2 rounded-3">
             <div className="input-group ">
               <span
@@ -44,7 +55,7 @@ export default function HeaderS() {
             </div>
           </form>
         </div>
-        <div className="col-md-4 d-flex align-items-center justify-content-end">
+        <div className="col-md-4 d-md-flex align-items-center justify-content-end icons-header">
           <form className="col-12 col-lg-auto mb-3 mb-lg-0 me-lg-3">
             <div className="input-group border py-2 rounded-3">
               <span
